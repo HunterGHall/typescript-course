@@ -1,0 +1,12 @@
+# MkDocs build output
+site/
+
+# TypeScript / Node build output
+node_modules/
+dist/
+*.tsbuildinfo
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/

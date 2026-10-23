@@ -1,0 +1,17 @@
+{
+  "name": "task-tracker",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "bin": { "tasks": "dist/main.js" },
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "build": "tsc",
+    "test": "tsc && node --test \"dist/**/*.test.js\"",
+    "start": "node dist/main.js"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.9.0"
+  }
+}

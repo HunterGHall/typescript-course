@@ -1,0 +1,31 @@
+name: Capstones
+
+# Builds and tests the three capstone projects that the lessons embed,
+# so the code in the course is always known to compile and pass.
+
+on:
+  push:
+    branches: [main]
+    paths: ["capstones/**", ".github/workflows/ci.yml"]
+  pull_request:
+    paths: ["capstones/**", ".github/workflows/ci.yml"]
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: ${{ matrix.os }} / Node ${{ matrix.node }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        node: ["22", "24"]
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - run: bash capstones/ci.sh

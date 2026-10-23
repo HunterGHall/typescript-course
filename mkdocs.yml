@@ -1,0 +1,95 @@
+site_name: The TypeScript Course
+site_description: A complete, self-paced TypeScript curriculum — beginner to advanced.
+site_url: https://hunterghall.github.io/typescript-course/
+repo_url: https://github.com/HunterGHall/typescript-course
+repo_name: HunterGHall/typescript-course
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.top
+    - navigation.footer
+    - content.code.copy
+    - toc.follow
+    - search.suggest
+    - search.highlight
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.details
+
+plugins:
+  - search
+
+nav:
+  - Home: index.md
+  - Beginner:
+      - beginner/index.md
+      - 1. Setup & your first program: beginner/01-setup-and-first-program.md
+      - 2. Variables & basic types: beginner/02-variables-and-types.md
+      - 3. Numbers & math: beginner/03-numbers-and-math.md
+      - 4. Strings: beginner/04-strings.md
+      - 5. Booleans & conditionals: beginner/05-booleans-and-conditionals.md
+      - 6. Loops: beginner/06-loops.md
+      - 7. Arrays & tuples: beginner/07-arrays.md
+      - 8. Objects, Maps & Sets: beginner/08-objects-maps-sets.md
+      - 9. Functions: beginner/09-functions.md
+      - 10. null, undefined & narrowing: beginner/10-null-and-narrowing.md
+      - 11. Files & error handling: beginner/11-files-and-error-handling.md
+      - 12. Capstone - task tracker: beginner/12-capstone-task-tracker.md
+  - Intermediate:
+      - intermediate/index.md
+      - 1. Interfaces & type aliases: intermediate/01-interfaces-and-type-aliases.md
+      - 2. Classes: intermediate/02-classes.md
+      - 3. Unions & discriminated unions: intermediate/03-unions.md
+      - 4. Generics: intermediate/04-generics.md
+      - 5. Utility types: intermediate/05-utility-types.md
+      - 6. Closures & higher-order functions: intermediate/06-closures.md
+      - 7. Modules & tsconfig: intermediate/07-modules-and-tsconfig.md
+      - 8. Errors in depth: intermediate/08-error-handling.md
+      - 9. Promises & async/await: intermediate/09-async-await.md
+      - 10. JSON & runtime validation: intermediate/10-json-and-validation.md
+      - 11. Testing: intermediate/11-testing.md
+      - 12. Capstone - link checker: intermediate/12-capstone-link-checker.md
+  - Advanced:
+      - advanced/index.md
+      - 1. The type system as a language: advanced/01-type-system-as-a-language.md
+      - 2. Conditional types & infer: advanced/02-conditional-types.md
+      - 3. Mapped & template literal types: advanced/03-mapped-and-template-types.md
+      - 4. Variance & type-level safety: advanced/04-variance-and-branding.md
+      - 5. Decorators & metaprogramming: advanced/05-decorators.md
+      - 6. The event loop & concurrency: advanced/06-event-loop.md
+      - 7. Streams & async iterators: advanced/07-streams-and-async-iterators.md
+      - 8. Worker threads: advanced/08-worker-threads.md
+      - 9. Performance & profiling: advanced/09-performance.md
+      - 10. Declaration files & JS interop: advanced/10-declaration-files-and-interop.md
+      - 11. Publishing libraries: advanced/11-publishing-libraries.md
+      - 12. Capstone - parallel file indexer: advanced/12-capstone-parallel-indexer.md
